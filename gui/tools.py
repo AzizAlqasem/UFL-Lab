@@ -6,4 +6,4 @@ def to_latex(text, x, round_digits=4, scientific_notation=False):
         res =  "%.*e" % (round_digits, x)
     else:
         res = "%.*f" % (round_digits, x)
-    return f"\text{text} = {res}"
+    return r"\text{" + text + "} = " + res
