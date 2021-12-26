@@ -21,4 +21,4 @@ def main():
     ob_c1, ob_c2 = st.columns(2)
     ob_i_p = ob_c1.number_input("Ionization Potential (eV)", value=15.0, step=1.0, key=5)
     ob_z = ob_c2.number_input("Charge of the ion (after ionization)", value=1, step=1, key=6)
-    st.latex(to_latex("Over the Barrier Intensity", over_the_barrier_intensity(ob_i_p, ob_z)))
+    st.latex(to_latex("Over the Barrier Intensity", over_the_barrier_intensity(ob_i_p, ob_z), scientific_notation=True))
