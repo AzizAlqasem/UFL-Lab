@@ -1,7 +1,6 @@
 import streamlit as st
-
+from gui.tools import to_latex
 from src.sf import pondermotive_energy, keldysh_parameter, over_the_barrier_intensity
-
 
 
 def main():
@@ -10,7 +9,7 @@ def main():
     pe_c1, pe_c2 = st.columns(2)
     pe_I = pe_c1.number_input("Intensity [10^14 W/cm^2]", value=1.0, key=1)
     pe_wl = pe_c2.number_input("Wavelength (um)", value=0.8, key=2)
-    st.latex(r"\text{Pondermotive Energy (eV)} = {}" + str(pondermotive_energy(pe_I, pe_wl)))
+    st.latex(to_latex("Pondermotive Energy", pondermotive_energy(pe_I, pe_wl)))
 
     st.markdown("""##### Keldysh Parameter""")
     kp_c1, kp_c2 = st.columns(2)
