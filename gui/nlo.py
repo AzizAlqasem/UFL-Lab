@@ -6,7 +6,7 @@ from src.nlo import sum_freq
 
 
 def main():
-    st.title("Nonlinear Optics Calculator")
+    st.markdown("### Nonlinear Optics Calculator")
     st.markdown("""#### Sum Freq Generator""")
     c1, c2 = st.columns(2)
     wl1 = c1.number_input("Wavelength 1 (nm)", value=800.0, step=50.0, key=1)
