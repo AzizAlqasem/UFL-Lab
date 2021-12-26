@@ -22,4 +22,4 @@ def main():
     ob_i_p = ob_c1.number_input("Ionization Potential (eV)", value=15.0, step=1.0, key=5)
     ob_z = ob_c2.number_input("Charge of the ion (after ionization)", value=1, step=1, key=6)
     ob_i = over_the_barrier_intensity(ob_i_p, ob_z) / 10**12
-    st.latex(to_latex("Over the Barrier Intensity (TW/CM^2)", ob_i, scientific_notation=False))
+    st.latex(to_latex("Over the Barrier Intensity (TW\/CM^2)", ob_i, scientific_notation=False))
